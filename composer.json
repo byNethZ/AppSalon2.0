@@ -1,0 +1,22 @@
+{
+    "name": "yanethz/app-salon_php_mvc_js_sass",
+    "description": "Proyecto php 8, MVC, SASS, Gulp, SQL",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "MVC\\" : "./",
+            "Controllers\\" : "./controllers",
+            "Model\\" : "./models",
+            "Classes\\" : "./classes"
+        }
+    },
+    "authors": [
+        {
+            "name": "byNethZ",
+            "email": "bynethz@gmail.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.5"
+    }
+}

@@ -1,0 +1,2 @@
+//composer.json psr-4
+"Yanethz\\AppSalonPhpMvcJsSass\\": "src/"
