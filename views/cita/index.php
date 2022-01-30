@@ -1,6 +1,8 @@
 <h1 class="nombre-pagina">Crear Nueva Cita</h1>
 <p class="descripcion-pagina">Elige tus servicios y coloca tus datos</p>
 
+<?php include_once __DIR__ . '/../templates/barra.php';  ?>
+
 <div id="app">
     <nav class="tabs">
         <button class="actual" type="button" data-paso="1">Servicios</button>
@@ -28,6 +30,7 @@
                 <label for="hora">Hora</label>
                 <input type="time" name="hora" id="hora" placeholder="Tu hora">
             </div>
+            <input type="hidden" name="id" id="id" value="<?php echo $id; ?>">
         </form>
     </div>
     <div id="paso-3" class="seccion contenido-resumen">
@@ -44,6 +47,7 @@
 
 <?php
     $script = '
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="build/js/app.js"></script>
     ';
 ?>

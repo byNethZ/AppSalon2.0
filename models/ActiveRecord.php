@@ -123,6 +123,13 @@ class ActiveRecord {
         return array_shift( $resultado ) ;
     }
 
+    //consulta plana de SQL (utilizar cuando sean varios modelos a la vez)
+        //buscar por una columna especifica
+        public static function SQL($query) {
+            $resultado = self::consultarSQL($query);
+            return $resultado ;
+        }
+
     // Obtener Registros con cierta cantidad
     public static function get($limite) {
         $query = "SELECT * FROM " . static::$tabla . " LIMIT ${limite}";
@@ -141,6 +148,9 @@ class ActiveRecord {
         $query .= " ) VALUES (' "; 
         $query .= join("', '", array_values($atributos));
         $query .= " ') ";
+
+        //esta linea permite ver el codigo del query:
+        //return json_encode(['query' => $query]);
 
         // Resultado de la consulta
         $resultado = self::$db->query($query);
